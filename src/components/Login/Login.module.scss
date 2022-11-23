@@ -1,0 +1,27 @@
+.login {
+  @apply py-16 ;
+}
+
+.container {
+  @apply w-full max-w-[1312px] mx-auto px-4;
+}
+
+.logo {
+  @apply block no-underline mb-20;
+}
+
+.form {
+  @apply flex flex-col max-w-[500px] w-full mx-auto;
+  h2 {
+    @apply mt-0 mb-16 font-medium text-5xl text-black ;
+  }
+  input {
+    @apply py-5 px-12 border rounded mb-7 ;
+  }
+  p {
+    @apply mt-0 mb-7 text-right font-normal text-base ;
+  }
+  button {
+    @apply w-full max-w-[161px] mx-auto py-4 px-12 bg-[#006AFF] rounded text-white font-normal text-2xl;
+  }
+}

@@ -1,0 +1,49 @@
+.footer {
+  @apply py-8;
+  background: linear-gradient(265.48deg, #095acd 33.12%, #006aff 84.7%);
+}
+
+.container {
+  @apply w-full max-w-[1312px] mx-auto px-4;
+}
+
+.boxTop {
+  @apply flex items-center justify-between pb-4 mb-4 border-b;
+}
+
+.logo {
+  @apply inline-block no-underline mb-1;
+}
+
+.right {
+  @apply flex items-center gap-8;
+  a {
+    @apply inline-block no-underline font-medium text-lg text-white;
+  }
+}
+
+.boxBottom {
+  @apply flex items-center justify-between;
+  .year {
+    @apply max-w-[255px] w-full;
+  }
+  p {
+    @apply inline-block no-underline font-medium text-lg text-white opacity-70;
+    a {
+      @apply underline;
+    }
+  }
+}
+
+@media only screen and (max-width: 872px) {
+  .boxTop,
+  .right {
+    @apply flex-col gap-3;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .boxBottom {
+    @apply flex-col gap-4 text-center;
+  }
+}

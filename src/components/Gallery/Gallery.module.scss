@@ -1,0 +1,11 @@
+.gallery {
+  @apply py-32 ;
+}
+
+.container {
+  @apply w-full max-w-[1312px] mx-auto px-4;
+}
+
+.title {
+  @apply font-semibold text-6xl text-center ;
+}

@@ -1,0 +1,137 @@
+.header {
+  @apply py-6;
+  background: linear-gradient(265.48deg, #095acd 33.12%, #006aff 84.7%);
+}
+
+.container {
+  @apply w-full max-w-[1312px] mx-auto px-4;
+}
+
+.headerTop {
+  @apply flex items-center justify-between gap-4;
+}
+
+.logo {
+  @apply inline-block no-underline;
+}
+
+.search {
+  @apply flex items-center ml-auto;
+  input {
+    @apply w-full max-w-xs py-[11px] px-[49px] rounded-l-md;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  button {
+    @apply py-[10px] px-[20px] bg-[#FE8B37] rounded-r-md text-white font-semibold text-lg;
+  }
+}
+
+.singinBox {
+  @apply flex items-center gap-3;
+}
+
+.singin {
+  @apply inline-block no-underline;
+  button {
+    @apply py-[10px] px-[20px] bg-[#FE8B37] rounded-md text-white font-semibold text-lg;
+  }
+}
+
+.checkBox {
+  @apply absolute top-[-4px] left-[-4px] w-0 h-0;
+}
+
+.hamburger {
+  @apply hidden w-8 h-8 cursor-pointer;
+  div {
+    @apply gap-[4px] relative flex flex-col items-center justify-center w-full h-full;
+    .line {
+      @apply transition-all block rounded-[5px] w-[80%] h-[5px] bg-white;
+    }
+  }
+}
+
+.checkBox:checked ~ .headerTop > .singinBox > .hamburger > div {
+  .line:nth-child(1) {
+    @apply absolute  rotate-45;
+  }
+  .line:nth-child(2) {
+    @apply h-0 bg-transparent;
+  }
+  .line:nth-child(3) {
+    @apply rotate-[-45deg] absolute;
+  }
+}
+
+.hero {
+  @apply relative;
+}
+
+.heroTop {
+  @apply flex items-center justify-center pt-24 pb-32 gap-24;
+}
+
+.title {
+  @apply font-semibold text-5xl text-white;
+}
+
+.heroBottom {
+  @apply absolute bottom-[-74px] left-2/4 -translate-x-1/2 w-full max-w-[1213px] flex items-center justify-center bg-white rounded-xl;
+  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+
+  a {
+    @apply inline-block no-underline py-9 px-12 text-[#333] font-medium text-2xl border-r;
+    &:nth-child(5) {
+      @apply border-none;
+    }
+  }
+}
+
+@media only screen and (max-width: 1244px) {
+  .hamburger {
+    @apply inline-block;
+  }
+  .heroBottom {
+    @apply fixed top-[-1000px] right-0 bottom-[1000px] left-0 translate-x-0 max-w-full z-10 flex-col rounded-none;
+    a {
+      @apply border-r-0 border-b;
+    }
+  }
+  .checkBox:checked ~ .hero > .heroBottom {
+    @apply top-20 bottom-0;
+  }
+}
+
+@media only screen and (max-width: 1001px) {
+  .headerTop {
+    @apply flex-wrap gap-6;
+  }
+  .heroTop {
+    @apply flex-col;
+  }
+  .title {
+    @apply text-center;
+  }
+  .headerTop {
+    @apply items-center;
+  }
+  .search {
+    @apply w-full max-w-full order-2;
+    input {
+      @apply w-full max-w-full;
+    }
+  }
+  .singin {
+    @apply ml-auto;
+  }
+}
+@media only screen and (max-width: 439px) {
+  .singin {
+    @apply w-full max-w-full order-1;
+    button {
+      @apply w-full;
+    }
+  }
+}
