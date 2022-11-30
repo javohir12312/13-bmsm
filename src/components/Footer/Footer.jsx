@@ -10,10 +10,15 @@ function Footer() {
   return (
     <footer className={style.footer}>
       <div className={style.container}>
-        <div className={style.boxTop}>
-          <Link className={style.logo} to={"/"} onClick={scrollTop}>
-            <img src={logo} width={150} height={44} alt="logo img" />
-          </Link>
+        <div className={style.box}>
+          <div className={style.logoBox}>
+            <Link className={style.logo} to={"/"} onClick={scrollTop}>
+              <img src={logo} width={150} height={44} alt="logo img" />
+            </Link>
+            <p className={style.year}>
+              Barcha huquqlar himoyalangan, 2022-2024
+            </p>
+          </div>
           <div className={style.right}>
             <Link to={"/"} onClick={scrollTop}>
               Bosh sahifa
@@ -23,20 +28,6 @@ function Footer() {
             <Link to={"/teachers"}>O'qituvchilarga</Link>
             <Link to={"/gallery"}>Fotogalelerya</Link>
           </div>
-        </div>
-        <div className={style.boxBottom}>
-          <p className={style.year}>Barcha huquqlar himoyalangan, 2022-2024</p>
-          <p>
-            Sayt{" "}
-            <a
-              href="https://www.instagram.com/jaloliddin_zokirovv/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Jaloliddin Zokirov
-            </a>{" "}
-            tomonidan 2022 yil ishlab chiqilgan
-          </p>
         </div>
       </div>
     </footer>

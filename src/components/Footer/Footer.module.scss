@@ -7,12 +7,18 @@
   @apply w-full max-w-[1312px] mx-auto px-4;
 }
 
-.boxTop {
+.box {
   @apply flex items-center justify-between pb-4 mb-4 border-b;
 }
 
-.logo {
-  @apply inline-block no-underline mb-1;
+.logoBox {
+  @apply max-w-[280px] w-full;
+  .logo {
+    @apply inline-block no-underline mb-1;
+  }
+  p {
+    @apply inline-block no-underline font-medium text-lg text-white opacity-70;
+  }
 }
 
 .right {
@@ -22,28 +28,13 @@
   }
 }
 
-.boxBottom {
-  @apply flex items-center justify-between;
-  .year {
-    @apply max-w-[255px] w-full;
-  }
-  p {
-    @apply inline-block no-underline font-medium text-lg text-white opacity-70;
-    a {
-      @apply underline;
-    }
-  }
+@media only screen and (max-width: 1005px) {
+
 }
 
-@media only screen and (max-width: 872px) {
-  .boxTop,
+@media only screen and (max-width: 1005px) {
+  .box,
   .right {
-    @apply flex-col gap-3;
-  }
-}
-
-@media only screen and (max-width: 760px) {
-  .boxBottom {
-    @apply flex-col gap-4 text-center;
+    @apply flex-col gap-3 text-center;
   }
 }
