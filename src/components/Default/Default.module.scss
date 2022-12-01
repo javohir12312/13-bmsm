@@ -69,7 +69,7 @@
       &:hover {
         .imgBox {
           img {
-            @apply h-[130px] w-[130px] ;
+            @apply h-[130px] max-w-[130px] w-full ;
           }
         }
       }
