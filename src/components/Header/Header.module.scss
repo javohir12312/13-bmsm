@@ -17,11 +17,13 @@
 
 .search {
   @apply flex items-center ml-auto;
+
   input {
     @apply w-full max-w-xs py-[11px] px-[49px] rounded-l-md;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
+
   button {
     @apply py-[10px] px-[20px] bg-[#FE8B37] rounded-r-md text-white font-semibold text-lg;
   }
@@ -33,6 +35,7 @@
 
 .singin {
   @apply inline-block no-underline;
+
   button {
     @apply py-[10px] px-[20px] bg-[#FE8B37] rounded-md text-white font-semibold text-lg;
   }
@@ -44,21 +47,25 @@
 
 .hamburger {
   @apply hidden w-8 h-8 cursor-pointer;
+
   div {
     @apply gap-[4px] relative flex flex-col items-center justify-center w-full h-full;
+
     .line {
       @apply transition-all block rounded-[5px] w-[80%] h-[5px] bg-white;
     }
   }
 }
 
-.checkBox:checked ~ .headerTop > .singinBox > .hamburger > div {
+.checkBox:checked~.headerTop>.singinBox>.hamburger>div {
   .line:nth-child(1) {
-    @apply absolute  rotate-45;
+    @apply absolute rotate-45;
   }
+
   .line:nth-child(2) {
     @apply h-0 bg-transparent;
   }
+
   .line:nth-child(3) {
     @apply rotate-[-45deg] absolute;
   }
@@ -83,23 +90,49 @@
 
   a {
     @apply inline-block no-underline py-9 px-12 text-[#333] font-medium text-2xl border-r;
+    color: #09397c;
     &:nth-child(5) {
       @apply border-none;
     }
   }
 }
 
+.heroBottom {
+  background: url(https://image.ibb.co/fmHm66/wave.png);
+  background-size: 400px;
+  animation: filling 20s infinite;
+  background-color: white;
+}
+
+@keyframes filling {
+  50% {
+    background-position: 3000px 0px;
+  }
+
+  70% {
+    background-position: 5000px 0px;
+  }
+
+  100% {
+    background-position: 6000px 0px;
+  }
+}
+
+
 @media only screen and (max-width: 1244px) {
   .hamburger {
     @apply inline-block;
   }
+
   .heroBottom {
     @apply fixed top-[-1000px] right-0 bottom-[1000px] left-0 translate-x-0 max-w-full z-10 flex-col rounded-none;
+
     a {
       @apply border-r-0 border-b;
     }
   }
-  .checkBox:checked ~ .hero > .heroBottom {
+
+  .checkBox:checked~.hero>.heroBottom {
     @apply top-20 bottom-0;
   }
 }
@@ -108,28 +141,36 @@
   .headerTop {
     @apply flex-wrap gap-6;
   }
+
   .heroTop {
     @apply flex-col;
   }
+
   .title {
     @apply text-center;
   }
+
   .headerTop {
     @apply items-center;
   }
+
   .search {
     @apply w-full max-w-full order-2;
+
     input {
       @apply w-full max-w-full;
     }
   }
+
   .singin {
     @apply ml-auto;
   }
 }
+
 @media only screen and (max-width: 439px) {
   .singin {
     @apply w-full max-w-full order-1;
+
     button {
       @apply w-full;
     }

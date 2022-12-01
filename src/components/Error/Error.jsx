@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Error.module.scss"
+import {Link} from "react-router-dom";
 
 const Error = () => {
   return (
@@ -12,6 +13,9 @@ const Error = () => {
           <p data-text="Page not found" className={styles.error__massage}>
             Page not found
           </p>
+
+          
+          <Link className={styles.btn} to={"/"}>Bosh sahifa</Link>
         </div>
       </div>
     </div>
