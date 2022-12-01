@@ -125,6 +125,13 @@
   }
 
   .heroBottom {
+    background: none;
+    background-size: 0;
+    animation: none;
+    background-color: white;
+  }
+
+  .heroBottom {
     @apply fixed top-[-1000px] right-0 bottom-[1000px] left-0 translate-x-0 max-w-full z-10 flex-col rounded-none;
 
     a {
