@@ -184,27 +184,23 @@
 }
 
 .heroBottom {
-  height: 120px;
-  background-color: red;
-  background: url(https://image.ibb.co/fmHm66/wave.png);
-  background-size: 400px;
-  background-repeat-y: no-repeat;
-  background-size: 400px 200px;
+  background: url('../image/wave.png');
+  background-size: 400px 104px;
   animation: filling 20s infinite;
   background-color: #fff;
 }
 
 @keyframes filling {
   0% {
-    background-position: 3000px 45px;
+    background-position: 3000px 0px;
   }
 
   50% {
-    background-position: 4000px 50px;
+    background-position: 4000px 0px;
   }
 
   100% {
-    background-position: 5000px 50px;
+    background-position: 5000px 0px;
   }
 }
 
