@@ -23,10 +23,22 @@ function Header() {
             </Link>
             <div className={style.search}>
               <input type="search" placeholder="Izlash..." />
-              <button>Qidiruv</button>
+              <button className={style.button}>
+                <svg className={style.wave} width="200" height="150" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.42897e-05 14.6302C49.6667 -42.5683 49.6667 91.7795 100 14.6302V150H1.42897e-05C0.399951 99.4224 0.518648 70.462 1.42897e-05 14.6302Z" fill="#0365ED" />
+                  <path d="M100 14.6302C149.667 -42.5683 149.667 91.7795 200 14.6302V150H100V14.6302Z" fill="#0365ED" />
+                </svg><span className={style.wave}></span>
+                <p className={style.anim__btn}>Izlash</p>
+              </button>
             </div>
             <Link className={style.singin} to={"/login"}>
-              <button>Ro'yxatdan o'tish</button>
+            <button className={style.button}>
+                <svg className={style.wave} width="200" height="150" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.42897e-05 14.6302C49.6667 -42.5683 49.6667 91.7795 100 14.6302V150H1.42897e-05C0.399951 99.4224 0.518648 70.462 1.42897e-05 14.6302Z" fill="#0365ED" />
+                  <path d="M100 14.6302C149.667 -42.5683 149.667 91.7795 200 14.6302V150H100V14.6302Z" fill="#0365ED" />
+                </svg><span className={style.wave}></span>
+                <p className={style.anim__btn}>Ro'yxatdan o'tish</p>
+              </button>
             </Link>
             <div className={style.singinBox}>
               <label

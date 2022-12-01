@@ -25,8 +25,52 @@
   }
 
   button {
-    @apply py-[10px] px-[20px] bg-[#FE8B37] rounded-r-md text-white font-semibold text-lg;
+    @apply py-[10px] px-[20px] bg-[none] rounded-r-md text-white font-semibold text-lg;
   }
+
+  .button {
+    position: relative;
+    border: none;
+    width: 120px;
+    height: 50px;
+    border-radius: 5px;
+    background: rgba(0, 255, 255, 0.3);
+    overflow: hidden;
+    box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.75)
+  }
+
+  .button .span {
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    font-size: 1rem
+  }
+
+  .wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: waveAnim ease-in-out 2s alternate infinite;
+  }
+
+  .anim__btn {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  @keyframes waveAnim {
+    from {
+      transform: rotateX(25deg) translateX(0%);
+    }
+
+    to {
+      transform: rotateX(60deg) translateX(-25%);
+    }
+  }
+
 }
 
 .singinBox {
@@ -38,6 +82,49 @@
 
   button {
     @apply py-[10px] px-[20px] bg-[#FE8B37] rounded-md text-white font-semibold text-lg;
+  }
+
+  .button {
+    position: relative;
+    border: none;
+    width: 160px;
+    height: 50px;
+    border-radius: 5px;
+    background: rgba(0, 255, 255, 0.3);
+    overflow: hidden;
+    box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.75)
+  }
+
+  .button .span {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    font-size: 1rem
+  }
+
+  .wave {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    animation: waveAnim1 ease-in-out 2s alternate infinite;
+  }
+
+  .anim__btn {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  @keyframes waveAnim1 {
+    from {
+      transform: rotateX(25deg) translateX(0%);
+    }
+
+    to {
+      transform: rotateX(60deg) translateX(-15%);
+    }
   }
 }
 
@@ -91,6 +178,7 @@
   a {
     @apply inline-block no-underline py-9 px-12 text-[#333] font-medium text-2xl border-r;
     color: #09397c;
+
     &:nth-child(5) {
       @apply border-none;
     }
@@ -98,26 +186,29 @@
 }
 
 .heroBottom {
+  height: 120px;
+  background-color: red;
   background: url(https://image.ibb.co/fmHm66/wave.png);
   background-size: 400px;
+  background-repeat-y: no-repeat;
+  background-size: 400px 200px;
   animation: filling 20s infinite;
-  background-color: white;
+  background-color: #fff;
 }
 
 @keyframes filling {
-  50% {
-    background-position: 3000px 0px;
+  0% {
+    background-position: 3000px 45px;
   }
 
-  70% {
-    background-position: 5000px 0px;
+  50% {
+    background-position: 4000px 50px;
   }
 
   100% {
-    background-position: 6000px 0px;
+    background-position: 5000px 50px;
   }
 }
-
 
 @media only screen and (max-width: 1244px) {
   .hamburger {
