@@ -4,12 +4,15 @@ import style from "./Detail.module.scss";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 const Detail = () => {
+  const scrollTop = () => {
+    document.getElementById("root").scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
-    <section className={style.detail}>
+    <section className={style.detail} id={'detail'}>
       <div className={style.container}>
         <div className={style.box}>
           <p className={style.links}>
-            <Link to={"/"}>Bosh sahifa</Link> <span><KeyboardArrowRightIcon /></span> Title
+            <Link to={"/"} onClick={() => scrollTop()}>Bosh sahifa</Link> <span><KeyboardArrowRightIcon /></span> Title
           </p>
           <h2>Title</h2>
           <img src="https://picsum.photos/1312/450" width={'1312px'} height={'450px'} alt="image" />

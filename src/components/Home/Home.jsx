@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      <main>{<Outlet />}</main>
+      <main className="main">{<Outlet />}</main>
       <Footer />
     </>
   );
