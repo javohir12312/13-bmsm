@@ -1,0 +1,26 @@
+.detail {
+  @apply py-24 ;
+}
+
+.container {
+  @apply w-full max-w-[1312px] mx-auto px-4;
+}
+
+.box {
+  @apply py-12 px-5 bg-slate-100 rounded-xl;
+  .links {
+    @apply mt-0 mb-6 font-medium text-xl text-slate-800;
+    a {
+      @apply inline-block text-blue-700 underline ;
+    }
+  }
+  h2 {
+    @apply mt-0 mb-10 font-semibold text-5xl text-slate-700 ;
+  }
+  img {
+    @apply rounded-lg mb-8;
+  }
+  p {
+    @apply my-0 font-normal text-xl text-slate-700 ;
+  }
+}

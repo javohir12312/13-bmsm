@@ -1,11 +1,67 @@
 .default {
-  @apply py-32 ;
+  @apply py-24 ;
 }
 
 .container {
   @apply w-full max-w-[1312px] mx-auto px-4;
 }
 
+.boxTop {
+  @apply flex justify-between gap-5 mb-14;
+}
+
+.boxLeft {
+  @apply w-3/4 rounded;
+}
+
 .title {
   @apply font-semibold text-6xl text-center ;
+}
+
+.imageBox {
+  @apply h-[439px] w-full rounded;
+  img {
+    @apply h-[439px] rounded ;
+  }
+}
+
+.boxRight {
+  @apply w-1/4 py-8 px-10 rounded ;
+  background: linear-gradient(265.48deg, #085ed7 33.12%, #006aff 84.7%);
+  .reklama{
+    @apply font-medium text-2xl text-white;
+  }
+}
+
+.boxBottom {
+  @apply py-12 px-10 bg-slate-100 rounded;
+  .titleBox{
+    @apply max-w-[200px] w-full mb-16 pl-5 border-l-4 border-blue-500;
+    h2 {
+      @apply my-0 font-medium text-2xl text-slate-700;
+      span {
+        @apply font-normal text-slate-500;
+      }
+    }
+  }
+  .list {
+    @apply flex gap-12 flex-wrap m-0 p-0 list-none ;
+    .item {
+      @apply max-w-[192px] w-full pt-5 pb-6 bg-white rounded ;
+      img {
+        @apply h-[120px] w-[120px] rounded-[50%] mx-auto;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+      }
+      .content {
+        @apply pt-6 px-4 ;
+        p {
+          @apply mb-4 font-medium text-xl text-slate-600;
+        }
+        a {
+          @apply block font-medium text-lg text-center text-white py-1 px-4 rounded-2xl ;
+          background: linear-gradient(265.48deg, #095acd 33.12%, #006aff 84.7%);
+        }
+      }
+    }
+  }
 }

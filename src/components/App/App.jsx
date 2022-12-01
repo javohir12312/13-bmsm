@@ -8,6 +8,7 @@ import Teachers from "../Teachers/Teachers";
 import Gallery from "../Gallery/Gallery";
 import Default from "../Default/Default";
 import Login from "../Login/Login";
+import Detail from "../Detail/Detail";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />}>
           <Route index element={<Default />} />
+          <Route path="detail" element={<Detail />} />
           <Route path="school" element={<School />} />
           <Route path="students" element={<Students />} />
           <Route path="teachers" element={<Teachers />} />
