@@ -22,6 +22,58 @@
     @apply mt-0 mb-7 text-right font-normal text-base ;
   }
   button {
-    @apply w-full max-w-[161px] mx-auto py-4 px-12 bg-[#006AFF] rounded text-white font-normal text-2xl;
+    @apply relative overflow-hidden w-full max-w-[161px] mx-auto py-3 px-12 bg-[#006AFF] rounded text-white font-normal text-2xl;
+    &:hover {
+      .wave {
+        top: -100px;
+      }
+    }
+    .text {
+      @apply relative z-10 my-0 font-medium text-lg text-center text-white;
+    }
+
+    .wave {
+      width: 161px;
+      height: 161px;
+      background-color: #006aff;
+      box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+      position: absolute;
+      left: 0;
+      top: -65px;
+      transition: 0.4s;
+
+      &::before,
+      &::after {
+        width: 200%;
+        height: 200%;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -75%);
+      }
+
+      &::before {
+        border-radius: 45%;
+        background-color: rgba(220, 220, 220, 1);
+        animation: wave 5s infinite;
+      }
+
+      &::after {
+        border-radius: 40%;
+        background-color: rgba(220, 220, 220, 0.5);
+        animation: wave 10s infinite;
+      }
+    }
+  }
+
+  @keyframes wave {
+    0% {
+      transform: translate(-50%, -75%) rotate(0deg);
+    }
+
+    100% {
+      transform: translate(-50%, -75%) rotate(360deg);
+    }
   }
 }

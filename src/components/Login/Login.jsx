@@ -15,7 +15,10 @@ const Login = () => {
           <input type="text" placeholder='Ismingizni kiriting...' />
           <input type="password" placeholder='Parolingizni kiriting...' />
           <p>Parolni unutdingizmi?</p>
-          <button>Kirish</button>
+          <button className={style.button}>
+            <p className={style.text}>Kirish</p>
+            <div className={style.wave}></div>
+          </button>
         </form>
       </div>
     </div>

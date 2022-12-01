@@ -96,7 +96,8 @@ const Default = () => {
               <div className={style.content}>
                 <p>Title</p>
                 <Link to={"detail"} onClick={() => scroolTop()}>
-                  Batafsil
+                  <p className={style.text}>Batafsil</p>
+                  <div className={style.wave}></div>
                 </Link>
               </div>
             </li>
