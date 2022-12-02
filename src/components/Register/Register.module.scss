@@ -1,3 +1,113 @@
-.input{
-  background: red;
+.box__inner {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 5rem;
+  border-radius: 2em;
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 35rem;
+
+  @media screen and (max-width: 800px) {
+    width: 500px;
+  }
+
+  @media screen and (max-width: 550px) {
+    width: 320px;
+  }
+
+  @media screen and (max-width: 450px) {
+    width: 300px;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 30px;
+  }
+
+  label span {
+    display: inline-block;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    position: relative;
+    bottom: 3rem;
+    transition: transform 200ms ease-in-out;
+  }
+
+  input {
+    position: relative;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+    background-color: transparent;
+    outline: none;
+    border: unset;
+    border-bottom: 1.5px solid white;
+    font-size: 1.25rem;
+    letter-spacing: 1.5px;
+    color: white;
+    z-index: 1;
+  }
+
+  button {
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 0.75rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 0.25em;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    transition: all 100ms ease-in-out;
+    transition: 0.3s;
+    color: rgba(0, 0, 0, 0.75);
+    background-color: #ccc;
+  }
+  
+  .a{
+    color: #0365ED;
+    transition: 0.3s;
+    &:hover{
+      color: #69bff8;
+    }
+  }
+
+  button:hover {
+    background-color: rgb(235, 235, 235);
+    color: black;
+  }
+
+  a {
+    color: rgb(235, 235, 235);
+  }
+
+  a:hover {
+    color: rgb(215, 215, 215);
+  }
+
+  p {
+    text-align: center;
+  }
+
+  input:focus,
+  input:valid {
+    border-bottom: 2px solid white;
+  }
+
+  input:focus+label span,
+  input:valid+label span {
+    color: white;
+    transform: translateY(-2rem);
+  }
+}
+
+.box {
+  height: 150vh;
+  display: grid;
+  place-items: center;
+  font-family: sans-serif;
+  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  color: rgb(225, 225, 255);
 }
