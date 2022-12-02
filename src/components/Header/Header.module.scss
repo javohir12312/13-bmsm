@@ -1,71 +1,3 @@
-
-  // .asas {
-  //   width: 200px;
-  //   padding: 20px 30px;
-  //   position: relative;
-  //   display: block;
-  //   text-decoration: none;
-  //   overflow: hidden;
-    
-  //   &:hover {
-  //     .wave2 {
-  //       top: -120px;
-  //     }
-  //   }
-
-  //   .asa {
-  //     position: relative;
-  //     z-index: 1;
-  //     color: white;
-  //     font-size: 15px;
-  //     letter-spacing: 8px;
-  //   }
-
-  //   .wave2 {
-  //     width: 200px;
-  //     height: 200px;
-  //     background-color: rgba(58, 58, 226, 0.5);
-  //     box-shadow: inset 0 0 50px rgba(0,0,0,.5);
-  //     position: absolute;
-  //     left: 0;
-  //     top: -80px;
-  //     transition: 0.4s;
-
-  //     &::before, &::after {
-  //       width: 200%;
-  //       height: 200%;
-  //       content: '';
-  //       position: absolute;
-  //       top: 0;
-  //       left: 50%;
-  //       transform: translate(-50%,-75%);
-  //     }
-
-  //     &::before {
-  //       border-radius: 45%;
-  //       background-color: rgba(50,50,50,1);
-  //       animation: wave2 5s  infinite;
-  //     }
-
-  //     &::after {
-  //       border-radius: 40%;
-  //       background-color: rgba(50,50,50,0.5);
-  //       animation: wave2 10s  infinite;
-  //     }
-  //   }
-  // }
-
-  // @keyframes wave2 {
-  //   0% {
-  //     transform: translate(-50%,-75%) rotate(0deg);
-  //   }
-
-  //   100% {
-  //     transform: translate(-50%,-75%) rotate(360deg);
-  //   }
-  // }
-
-
 .header {
   @apply py-6;
   background: linear-gradient(265.48deg, #095acd 33.12%, #006aff 84.7%);
@@ -94,6 +26,7 @@
 
   .button {
     @apply w-full max-w-[120px] py-[10px] px-[20px] bg-[none] rounded-r-md text-white font-semibold text-lg relative block overflow-hidden;
+
     &:hover {
       .wave {
         top: -70px;
@@ -101,53 +34,9 @@
     }
 
     .btnText {
-      @apply relative z-10 text-white font-semibold text-lg ;
-    }
-
-    .wave {
-      width: 120px;
-      height: 120px;
-      background-color: rgba(58, 58, 226, 0.5);
-      box-shadow: inset 0 0 50px rgba(0,0,0,.5);
-      position: absolute;
-      left: 0;
-      top: -40px;
-      transition: 0.4s;
-
-      &::before, &::after {
-        width: 200%;
-        height: 200%;
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%,-75%);
-      }
-
-      &::before {
-        border-radius: 45%;
-        background-color: rgba(220,220,220,1);
-        animation: wave 5s  infinite;
-      }
-
-      &::after {
-        border-radius: 40%;
-        background-color: rgba(220,220,220,0.5);
-        animation: wave 10s  infinite;
-      }
+      @apply relative z-10 text-white font-semibold text-lg;
     }
   }
-
-  @keyframes wave {
-    0% {
-      transform: translate(-50%,-75%) rotate(0deg);
-    }
-
-    100% {
-      transform: translate(-50%,-75%) rotate(360deg);
-    }
-  }
-
 }
 
 .singinBox {
@@ -159,6 +48,7 @@
 
   .button {
     @apply relative block w-full max-w-[200px] py-[10px] px-[20px] rounded-md overflow-hidden;
+
     &:hover {
       .wave {
         top: -120px;
@@ -166,52 +56,9 @@
     }
 
     .btnText {
-      @apply relative z-10 text-white font-semibold text-lg ;
-    }
-
-    .wave {
-      width: 200px;
-      height: 200px;
-      background-color: rgba(58, 58, 226, 0.5);
-      box-shadow: inset 0 0 50px rgba(0,0,0,.5);
-      position: absolute;
-      left: 0;
-      top: -80px;
-      transition: 0.4s;
-
-      &::before, &::after {
-        width: 200%;
-        height: 200%;
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%,-75%);
-      }
-
-      &::before {
-        border-radius: 45%;
-        background-color: rgba(220,220,220,1);
-        animation: wave 5s  infinite;
-      }
-
-      &::after {
-        border-radius: 40%;
-        background-color: rgba(220,220,220,0.5);
-        animation: wave 10s  infinite;
-      }
+      @apply relative z-10 text-white font-semibold text-lg;
     }
   }
-
-  @keyframes wave {
-    0% {
-      transform: translate(-50%,-75%) rotate(0deg);
-    }
-
-    100% {
-      transform: translate(-50%,-75%) rotate(360deg);
-    }
-  }  
 }
 
 .checkBox {
@@ -271,25 +118,12 @@
   }
 }
 
-.heroBottom {
-  background: url('../image/wave.png');
-  background-size: 400px 104px;
-  animation: filling 20s infinite;
-  background-color: #fff;
+.button{
+  background-color: rgba(223, 128, 59,0.92);
 }
 
-@keyframes filling {
-  0% {
-    background-position: 3000px 0px;
-  }
-
-  50% {
-    background-position: 4000px 0px;
-  }
-
-  100% {
-    background-position: 5000px 0px;
-  }
+.button:hover{
+  background-color: rgba(223, 128, 59,);
 }
 
 @media only screen and (max-width: 1244px) {

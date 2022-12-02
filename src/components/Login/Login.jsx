@@ -14,7 +14,7 @@ const Login = () => {
           <h2>Tizimga kirish</h2>
           <input type="text" placeholder='Ismingizni kiriting...' />
           <input type="password" placeholder='Parolingizni kiriting...' />
-          <p>Parolni unutdingizmi?</p>
+          <Link to={"/Register"}>Parolni unutdingizmi?</Link>
           <button className={style.button}>
             <p className={style.text}>Kirish</p>
             <div className={style.wave}></div>

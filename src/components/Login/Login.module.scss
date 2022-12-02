@@ -18,8 +18,11 @@
   input {
     @apply py-5 px-12 border rounded mb-7 ;
   }
-  p {
-    @apply mt-0 mb-7 text-right font-normal text-base ;
+  a{
+    transition: 0.3s
+  }
+  a {
+    @apply mt-0 mb-7 text-right font-normal text-base;
   }
   button {
     @apply relative overflow-hidden w-full max-w-[161px] mx-auto py-3 px-12 bg-[#006AFF] rounded text-white font-normal text-2xl;

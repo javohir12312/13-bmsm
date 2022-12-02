@@ -9,6 +9,7 @@ import Gallery from "../Gallery/Gallery";
 import Default from "../Default/Default";
 import Login from "../Login/Login";
 import Detail from "../Detail/Detail";
+import Register from "../Register/Register";
 
 const App = () => {
   return (
@@ -23,6 +24,8 @@ const App = () => {
           <Route path="gallery" element={<Gallery />} />
         </Route>
         <Route path="/login" element={<Login />} />
+        <Route path="/Register" element={<Register />} />
+
         <Route path="*" element={<Error />} />
       </Routes>
     </>
