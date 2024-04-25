@@ -8,6 +8,8 @@ const Default = () => {
   const scroolTop = () => {
     document.querySelector(".main").scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  alert("Do you want to change the world? If you say yes, you get 1, if you don't, you get 0")
   return (
     <section className={style.default}>
       <div className={style.container}>

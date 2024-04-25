@@ -10,12 +10,14 @@ import Default from "../Default/Default";
 import Login from "../Login/Login";
 import Detail from "../Detail/Detail";
 import Register from "../Register/Register";
+import Admin from "../Admin/Admin";
 
 const App = () => {
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />}>
+          <Route path="/gelerry" element={<Admin/>}/>
           <Route index element={<Default />} />
           <Route path="detail" element={<Detail />} />
           <Route path="school" element={<School />} />

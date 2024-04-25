@@ -60,8 +60,8 @@ function Header() {
             <div className={style.heroTop}>
               <img src={flag} width={600} height={229} alt="flag logo" />
               <div>
-                <h1 className={style.title}>
-                  13 - Sonli Bolalar <br /> Musiqa va San'at Maktabi
+                <h1 className={localStorage.getItem("user") == 1 ? style.title2 : style.title}>
+                  {localStorage.getItem("user") == 1 ? "go to hamburger there is something you have not seen" : "13 - Sonli Bolalar \n Musiqa va San'at Maktabi"}
                 </h1>
               </div>
             </div>
@@ -71,6 +71,9 @@ function Header() {
               <Link to={"students"}>O'quvchilarga</Link>
               <Link to={"teachers"}>O'qituvchilarga</Link>
               <Link to={"gallery"}>Fotogalelerya</Link>
+              
+              {localStorage.getItem("user")== 1 ? <Link to={"gelerry"}>Flag</Link> : null}  
+            
             </div>
           </div>
         </div>

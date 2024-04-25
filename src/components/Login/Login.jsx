@@ -4,6 +4,7 @@ import style from './Login.module.scss'
 import logoBlue from '../image/logo-blue.png'
 
 const Login = () => {
+  localStorage.setItem("user", 0)
   return (
     <div className={style.login}>
       <div className={style.container}>

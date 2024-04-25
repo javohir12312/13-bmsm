@@ -102,6 +102,9 @@
 .title {
   @apply font-semibold text-5xl text-white;
 }
+.title2{
+   @apply font-semibold text-5xl text-white
+}
 
 .heroBottom {
   @apply absolute bottom-[-74px] left-2/4 -translate-x-1/2 w-full max-w-[1238px] flex items-center justify-center bg-white rounded-xl;
