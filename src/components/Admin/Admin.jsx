@@ -1,20 +1,26 @@
 import React from 'react';
+import md5 from 'md5'; 
 
 const Admin = () => {
   const isAdmin = localStorage.getItem("user");
-  let decodedFlag = "";
+  let aaaaa = "";
 
-  if (isAdmin === "1") {
-    const encodedFlag = "RkxBR3tEb191b193b250X3RvX2NoYW5nZV90aGVfd29ybGRfP30=";
-    decodedFlag = atob(encodedFlag);
-    console.log(decodedFlag);
+  if (isAdmin == 1) {
+    const iiiii = "RkxBR3tEb191b193b250X3RvX2NoYW5nZV90aGVfd29ybGRfP30=";
+    aaaaa = atob(iiiii);
+    const lll = md5(aaaaa); 
+    console.log(lll);
   } else {
     window.location.replace("/");
   }
 
   return (
     <div>
-      <p>Decoded Flag: {decodedFlag}</p>
+      <br />
+      <br />
+      <br />
+      <br />
+      <p>Decoded Flag: {aaaaa}</p>
     </div>
   );
 }
