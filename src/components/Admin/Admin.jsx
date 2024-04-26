@@ -20,7 +20,7 @@ const Admin = () => {
       <br />
       <br />
       <br />
-      <p>Decoded Flag: {aaaaa}</p>
+      <p>{aaaaa}</p>
     </div>
   );
 }
